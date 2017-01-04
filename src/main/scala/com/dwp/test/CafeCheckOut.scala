@@ -21,6 +21,8 @@ object CafeCheckOut {
      printf("3.Cheese Sandwich-cold:(one each)\t"+":£2.00pp\n")
      printf("4.Steak Sandwich-hot:(one each)\t"+":£4.50pp\n")
      var l= List("Cola","Coffee","Cheese Sandwich")
+     val cold_food=List("Cheese Sandwich")
+     val hot_food=List("Steak Sandwich")
      var sum=0.0
      var Invalid_Items=0
     if(!l.length<0){
@@ -42,6 +44,23 @@ object CafeCheckOut {
     }
      
     printf(" you have bought \n"+l)
+    if(l.filter(cold_food.contains()!=null)&&l.filter(hot_food.contains()==null)){
+      println("You will be charged a 10% of service charge for food")
+      sum+=sum*0.1
+      println("Please pay %.2f"sum)
+      
+    } else if (l.filter(hot_food.contains()!=null))
+    {
+      println("You will be charged a 20% of service charge for hot food")
+      var service_charge=sum*0.2
+      if(service_charge<20)
+      sum+=sum*0.2
+      else
+        sum+=20
+      println("Please pay %.2f"sum)
+      
+    }else
+      
     printf("Please pay :£ $sum")
      
   }
