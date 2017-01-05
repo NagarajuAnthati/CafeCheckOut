@@ -27,9 +27,9 @@ object CafeCheckOut {
      var Invalid_Items=0
     if(!l.length<0){
     
-   for x in l{
+   for ( x<-l){
         
-    x=> match {
+    x => match {
       
       case "Cola" => sum+=0.50
       case "Coffee" => sum+=1.00
@@ -47,17 +47,17 @@ object CafeCheckOut {
     if(l.filter(cold_food.contains()!=null)&&l.filter(hot_food.contains()==null)){
       println("You will be charged a 10% of service charge for food")
       sum+=sum*0.1
-      println("Please pay %.2f"sum)
+      println("Please pay £ %.2f"sum)
       
     } else if (l.filter(hot_food.contains()!=null))
     {
       println("You will be charged a 20% of service charge for hot food")
       var service_charge=sum*0.2
       if(service_charge<20)
-      sum+=sum*0.2
+      sum+=service_charge
       else
         sum+=20
-      println("Please pay %.2f"sum)
+      println("Please pay £ %.2f"sum)
       
     }else
       
